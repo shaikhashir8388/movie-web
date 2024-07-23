@@ -1,4 +1,3 @@
-
 import React from 'react';
 import MovieCard from "@/app/components/MovieCard";
 import styles from "@/app/styles/common.module.css";

@@ -8,6 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@next/swc-win32-x64-msvc": "^14.2.5",
     "autoprefixer": "^10.4.19",
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.1",
