@@ -12,7 +12,7 @@ const mulish = Mulish({
 
 const ContactForm = () => {
     const [user, setUser] = useState({
-        username: "",
+        name: "",
         email: "",
         phone: "",
         message: ""
@@ -33,18 +33,13 @@ const ContactForm = () => {
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    username: user.username,
-                    email: user.email,
-                    phone: user.phone,
-                    message: user.message
-                })
+                body: JSON.stringify(user)  // Simplified body assignment
             });
 
             // Set the status based on the response from the API route
             if (response.status === 200) {
                 setUser({
-                    username: "",
+                    name: "",
                     email: "",
                     phone: "",
                     message: ""
@@ -63,12 +58,12 @@ const ContactForm = () => {
     return (
         <form className={styles.contact_form} onSubmit={handleSubmit}>
             <div className={styles.input_field}>
-                <label htmlFor="username" className={styles.label}>
+                <label htmlFor="name" className={styles.label}>
                     Enter your name
-                    <input type="text" name="username" id="username"
+                    <input type="text" name="name" id="name"
                         placeholder="Enter your name"
                         className={mulish.className}
-                        value={user.username}
+                        value={user.name}
                         onChange={handleChange}
                         required
                     />
@@ -92,7 +87,7 @@ const ContactForm = () => {
             <div className={styles.input_field}>
                 <label htmlFor="phone" className={styles.label}>
                     Phone Number
-                    <input type="number" name="phone" id="phone"
+                    <input type="text" name="phone" id="phone"
                         placeholder="Enter your phone"
                         className={mulish.className}
                         value={user.phone}
