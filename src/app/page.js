@@ -1,3 +1,4 @@
+import React from "react";
 import Herosection from "@/app/components/Herosection";
 
 const Page = () => {

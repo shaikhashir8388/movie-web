@@ -23,7 +23,8 @@ export default {
         },
       },
       rules: {
-        // Add your custom rules here
+        'react/react-in-jsx-scope': 'off',
+        'react/prop-types': 'off', // Disable PropTypes rule
       },
       settings: {
         react: {

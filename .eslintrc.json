@@ -22,7 +22,15 @@
     "@next/next"
   ],
   "rules": {
-    // Add your custom rules here
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "no-undef": "off",
+    "no-useless-escape": "off"
   },
   "settings": {
     "react": {
